@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!-- custom_popup_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/lyt_popup"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_popup"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="@dimen/_2sdp"
+        android:layout_height="wrap_content">
+        <!-- Add your custom views here -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </androidx.cardview.widget.CardView>
+    <!-- Add more views as needed -->
+</LinearLayout>

@@ -1,0 +1,129 @@
+plugins {
+    id 'com.android.application'
+//    id 'org.jetbrains.kotlin.android'
+}
+apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-kapt'
+android {
+    signingConfigs {
+        release {
+            storeFile file('/Users/dudhat/Documents/keystore/com.kyc.nashid.jks')
+            storePassword 'com.kyc.nashid'
+            keyAlias 'com.kyc.nashid'
+            keyPassword 'com.kyc.nashid'
+        }
+    }
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.kyc.nashid"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -frtti -fexceptions"
+                abiFilters 'armeabi-v7a', 'arm64-v8a'
+                arguments "-DANDROID_ARM_NEON=TRUE"
+                arguments "-DANDROID_TOOLCHAIN=clang"
+            }
+        }
+
+        sourceSets {
+            main {
+                jniLibs.srcDirs 'src/main/cpp/jniLibs'
+            }
+        }
+    }
+    externalNativeBuild {
+        cmake {
+//            path "CMakeLists.txt"
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+    buildFeatures {
+        viewBinding true
+//        dataBinding true
+    }
+    buildTypes {
+        release {
+//            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs 'src/main/cpp/libs'
+//            jniLibs.srcDirs = ['libs']
+        }
+    }
+    /* dataBinding {
+         enabled = true
+     }*/
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            applicationId "com.kyc.nashid.dev"
+            manifestPlaceholders = [appLabel: "Dev.OVerify"]
+        }
+        prod {
+            applicationId "com.kyc.nashid"
+            manifestPlaceholders = [appLabel: "OVerify"]
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+//    implementation project(path: ':nashidmrz')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //added forliveness
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:'1.3.71'"
+//    implementation 'androidx.core:core-ktx:1.3.0'
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0'
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'
+
+    implementation 'com.caverock:androidsvg-aar:1.4'
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.airbnb.android:lottie:4.2.0'
+
+    //country code picker
+//    implementation 'com.hbb20:ccp:2.6.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha03'
+//    implementation 'com.nashid.sdk.prod:IDV-Prod:1.0'
+//    1.2 without passport nfc
+//    1.1 last version before reading name
+    implementation 'com.nashid.sdk:IDV:1.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22"
+//    implementation 'com.github.poovamraj:PinEditTextField:1.2.6'
+//barcode scanner
+    implementation "androidx.camera:camera-camera2:1.0.0-SNAPSHOT"
+    implementation "androidx.camera:camera-lifecycle:1.0.0-SNAPSHOT"
+    implementation "androidx.camera:camera-view:1.0.0-SNAPSHOT"
+    implementation 'com.google.mlkit:barcode-scanning:17.2.0'
+}

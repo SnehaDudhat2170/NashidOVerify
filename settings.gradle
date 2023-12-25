@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+//        maven { url 'https://jitpack.io' }
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven { url 'https://mvnrepository.com/artifact/com.github.gundy/semver4j' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+//        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven { url 'https://mvnrepository.com/artifact/com.github.gundy/semver4j' }
+    }
+}
+rootProject.name = "NashidOVerify"
+include ':app'
+//include ':nashidmrz'
+//include ':LivenessOval'

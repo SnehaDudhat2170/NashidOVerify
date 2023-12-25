@@ -1,0 +1,200 @@
+<resources>
+    <string name="app_name">O.Verify</string>
+
+    <!--    api baseurl sharedprefernce key-->
+    <string name="backend_base_url">backend_base_url</string>
+    <string name="check_user">check_user</string>
+    <string name="face_match_base_url">face_match_base_url</string>
+    <string name="qr_code">qr_code</string>
+    <string name="aml_base_url">aml_base_url</string>
+    <string name="aml_detail">aml_detail</string>
+    <string name="image_crop_base_url">image_crop_base_url</string>
+    <string name="company_uuid">company_uuid</string>
+    <string name="dealer">dealer</string>
+    <string name="login_feature">login_feature</string>
+    <string name="scan_code">scan_code</string>
+    <string name="otp_token">otp_token</string>
+    <string name="reset_otp_token">reset_otp_token</string>
+    <string name="reset_base_url">reset_base_url</string>
+    <string name="register_token">register_token</string>
+    <string name="nashid_token">nashid_token</string>
+    <string name="company_data_sharing">company_data_sharing</string>
+    <string name="company_verification_documents">company_verification_documents</string>
+    <string name="company_name">company_name</string>
+    <string name="register_name">register_name</string>
+    <!--    <string name="turbo_mode">turbo_mode</string>-->
+    <string name="login_url">login_url</string>
+    <string name="user_companies">user_companies</string>
+    <string name="switch_company">switch_company</string>
+    <string name="app_version">app_version</string>
+    <string name="company_domain">company_domain</string>
+    <string name="main_server">main_server</string>
+    <!--    end here-->
+    <string name="nfc">NFC</string>
+    <string name="setting">Settings</string>
+    <string name="facila_matching">Facial Matching</string>
+    <string name="ocr">OCR</string>
+    <string name="liveness">Liveness</string>
+    <string name="verification_step">Instructions</string>
+    <string name="aml_screening">AML Screening</string>
+
+    <!--    company code-->
+    <string name="company_header_title">Code</string>
+    <string name="company_header">Enter company code</string>
+    <string name="company_desc">Enter the company code that is provided for registration.</string>
+    <string name="mask_character">\u2022</string>
+    <!--    end here-->
+    <!--    register page-->
+    <string name="register_phone">Phone</string>
+    <string name="register_header_title">Register</string>
+    <string name="register_title">Register Account</string>
+    <string name="register_subtitle">Enter a valid phone number or email address to register a new account.</string>
+    <string name="register_email">Email</string>
+    <string name="register_send_otp">Send OTP</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="email_hint">Email</string>
+    <string name="dont_account">You already have an account ?</string>
+    <string name="login"><u>Login</u></string>
+    <!--    end here-->
+    <!--    otp validate-->
+    <string name="txt_resend">If you didn’t receive code ?</string>
+    <string name="txt_resend_word"><u>Resend</u></string>
+    <string name="otp_validate">Validate</string>
+    <string name="otp_toolbar">OTP</string>
+    <string name="otp_title">Confirm Account</string>
+    <string name="otp_phone_subtitle">Enter the 4-digit OTP code that was sent to your phone number.</string>
+    <string name="otp_email_subtitle">Enter the  code that was sent to your email address.</string>
+    <!--    end here-->
+
+
+    <!--    register account detail-->
+    <string name="account_detail_header">Account Details</string>
+    <string name="account_detail_subtitle">What should we call you?</string>
+    <string name="btn_sccount_register">Register</string>
+    <string name="edt_hint_first_name">First Name</string>
+    <string name="edt_hint_last_name">Last Name</string>
+    <string name="regiter_success">Account Registration Successful!</string>
+    <string name="otp_incorrect">OTP code is incorrect!</string>
+    <string name="otp_success">Account Validated!</string>
+    <!--    end here-->
+
+    <!--    pin code-->
+    <string name="create_pincode_header">Create Pin Code</string>
+    <string name="create_pincode_subtitle">Enter a 6-digit pin code to secure your account.</string>
+    <string name="confirm_pincode_header">Confirm Pin Code</string>
+    <string name="confirm_pincode_subtitle">Repeat the 6-digit pin code for confirmation.</string>
+    <string name="pincode_confirm">Confirm</string>
+    <string name="pincode_validate">Validate</string>
+    <!--    end here-->
+    <!--    success or failure message for dialog-->
+    <string name="company_code_fail">Company code is incorrect!</string>
+    <string name="pin_match_fail">Confirm Pin does not match!</string>
+    <!--    end here-->
+    <!--    phone/email confirmation-->
+    <string name="phone_confirmation">Phone Number Confirmation</string>
+    <string name="phone_confirm_desc">Is this your correct phone number?</string>
+    <string name="email_confirmation">Email Confirmation</string>
+    <string name="email_confirm_desc">Is this your correct email?</string>
+    <string name="phone_error">Phone number not permitted, please contact administrator!</string>
+    <string name="email_error">Email address not permitted, please contact administrator!</string>
+    <!--    end here-->
+    <!--    login-->
+    <string name="login_header">Login</string>
+    <string name="login_title">Log into your Account</string>
+    <string name="login_subtitle">Use your registered phone number or Email to log in to your account.</string>
+    <string name="login_account">You don’t have an account ? </string>
+    <string name="login_signup_word"><u>Sign Up</u></string>
+    <string name="header_back_icon_size">18</string>
+    <string name="login_next">Next</string>
+    <string name="pin_title">Enter 6-Digit PIN</string>
+    <string name="pin_subtitle">Enter the 6-digit PIN used to register this account.</string>
+    <string name="pin_reset">Forgot your pin?</string>
+    <string name="btn_pin_reset"><u>Reset</u></string>
+    <string name="login_phone_error">Phone number is not valid!</string>
+    <string name="login_email_error">Email address is not valid!</string>
+    <string name="login_pincode_error">PIN code is incorrect!</string>
+    <!--    end here-->
+
+    <!--    drawer option-->
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_history">History</string>
+    <string name="nav_contatctus">Contact Us</string>
+    <string name="nav_turbomode">Turbo Mode</string>
+    <string name="nav_instruction">Instructions</string>
+    <string name="nav_logout">Logout</string>
+    <string name="main_header">nashid</string>
+    <string name="header_menu_icon_size">25</string>
+    <string name="nav_option_margin">30</string>
+    <string name="nav_icon_size">25</string>
+    <string name="nav_text_size">16</string>
+    <string name="nav_text_padding">10</string>
+    <!--    end here-->
+
+    <!--    home screen-->
+    <string name="home_desc">Please select the type of document you want to use</string>
+    <!--    end here-->
+
+    <!--    profile screen-->
+    <string name="header_profile">Profile</string>
+    <string name="profile_firstname">First Name</string>
+    <string name="profile_lastname">Last Name</string>
+    <string name="profile_phone">Phone Number</string>
+    <string name="profile_email">Email Address</string>
+    <string name="profile_update">Update</string>
+    <string name="btn_save">Save</string>
+    <string name="profile_updated_success">Updated Successfully!</string>
+    <!--    end here-->
+    <!--    contact us-->
+    <string name="contact_header">Contact</string>
+    <string name="contact_title">Get in touch</string>
+    <string name="contact_subtitle">Looking for support?\nUse the contact details below to get in touch</string>
+    <string name="contact_email">support@nashid.io</string>
+    <!--    end here-->
+    <!--    reset-->
+    <string name="reset_header">Code</string>
+    <string name="reset_btn_login">Login</string>
+    <string name="reset_btn_reset">Reset</string>
+    <string name="reset_title">Enter 6-Digit PIN</string>
+    <string name="reset_subtitle">Enter the 6-digit PIN used to register this account.</string>
+    <string name="reset_pin_title">Reset Pin</string>
+    <string name="reset_pin_subtitle">Enter the phone number or email address used when registering the account and we will send instructions to reset your pin.</string>
+    <string name="reset_enter_pin_title">Confirm Account</string>
+    <string name="reset_enter_pin_subtitle_phone">Enter the 4-digit OTP code that was sent to your phone number.</string>
+    <string name="reset_enter_pin_subtitle_email">Enter the  code that was sent to your email address.</string>
+    <string name="reset_sucess">Your code has been updated Successfully!</string>
+    <!--    end here-->
+    <!--    logout-->
+    <string name="logout_title">Confirm Logout</string>
+    <string name="logout_subtitle">Are you sure you want to logout?</string>
+    <!--    end here-->
+    <!--    scan error ui-->
+    <string name="error_1">Ensure the place is well-lit </string>
+    <string name="error_2">Ensure there’s no glare on the card</string>
+    <string name="error_3">Ensure to place the card inside the frame</string>
+    <string name="error_face_match">Position your face inside the oval \n Do not move your face while scanning</string>
+    <!--    end here-->
+    <!--    history scan-->
+    <string name="history_header">History</string>
+    <string name="history_title">Recent Scans</string>
+    <string name="history_reference_id">Reference ID</string>
+    <!--    end here-->
+    <string name="btn_next">Next</string>
+    <string name="root_dialog">Rooted Device Detected</string>
+    <string name="root_desc">This app does not support rooted devices for security reasons.</string>
+    <string name="root_btn">Exit</string>
+    <string name="no_internet_error">Internet not available, Cross check your internet connectivity and try again</string>
+    <string name="doc_key">SELECTED_DOC</string>
+
+    <string name="validating">Validating...</string>
+    <string name="txt_qr_enter_value">Or enter the code manually</string>
+    <string name="txt_scan_header">Code</string>
+    <string name="txt_scan_line1">Scan QR Code</string>
+    <string name="txt_scan_line2">Scan QR code to proceed.</string>
+    <string name="edt_enter_code">Enter the code</string>
+    <string name="switch_company_fail">Failed to switch company</string>
+
+    <string name="phone_failure">Please enter your phone number</string>
+    <string name="email_failure">Please enter your email</string>
+
+</resources>

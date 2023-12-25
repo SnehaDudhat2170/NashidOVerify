@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lyt_main_enter_company_code"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_header"
+            layout="@layout/layout_header" />
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_logo"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/header_bold"
+            android:gravity="center"
+            android:text="@string/register_title"
+            android:textColor="@color/regi_header_color" />
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:text="@string/company_desc"
+            android:textColor="@color/regi_header_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--<com.kyc.nashid.otpview.OtpView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:inputType="text"
+                android:itemBackground="@drawable/bg_otp_item"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                app:OtpHideLineWhenFilled="true"
+                app:OtpItemCount="6"
+                app:OtpLineColor="@color/orange"
+                app:OtpViewType="rectangle" />
+-->
+            <com.kyc.nashid.login.customview.SquarePinField
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:textSize="16sp"
+                app:cornerRadius="10dp"
+                app:distanceInBetween="5dp"
+                app:fieldBgColor="@color/otp_background"
+                app:fieldColor="@color/otp_background"
+                app:highlightColor="@color/otp_background"
+                app:highlightType="allFields"
+                app:noOfFields="6" />
+
+            <LinearLayout
+                android:id="@+id/lyt_resend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_resend_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/login_account"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/login_signup_word"
+                    android:textColor="@color/resend" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/button_color">
+
+            <TextView
+                android:id="@+id/txt_btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pingmedium"
+                android:gravity="center"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"></TextView>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/custom_loader"
+        layout="@layout/loader_layout"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lyt_register_successfully"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/barcode_back"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/img_scan_complete"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/scan_completed" />
+
+            <TextView
+                android:id="@+id/txt_scan_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/header_bold"
+                android:text="@string/regiter_success"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/button_color">
+
+            <TextView
+                android:id="@+id/txt_btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pingmedium"
+                android:gravity="center"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"></TextView>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

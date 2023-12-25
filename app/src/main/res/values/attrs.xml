@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CoverView">
+        <attr name="horizontalPadding"  format="dimension"/>
+        <attr name="verticalPadding"    format="dimension"/>
+        <attr name="backgroundColor"    format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="RectView">
+        <attr name="x1"             format="integer"/>
+        <attr name="y1"             format="integer"/>
+        <attr name="x2"             format="integer"/>
+        <attr name="y2"             format="integer"/>
+        <attr name="confidence"     format="float"/>
+        <attr name="color"          format="color"/>
+        <attr name="textSize"       format="dimension"/>
+        <attr name="textPadding"    format="dimension"/>
+        <attr name="radius"         format="dimension" />
+        <attr name="lineLength"     format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="OtpViewTheme">
+        <attr format="reference" name="otpViewStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="OtpView">
+        <attr format="integer" name="OtpItemCount"/>
+        <attr format="dimension" name="OtpItemWidth"/>
+        <attr format="dimension" name="OtpItemHeight"/>
+        <attr format="dimension" name="OtpItemRadius"/>
+        <attr format="dimension" name="OtpItemSpacing"/>
+        <attr format="dimension" name="OtpLineWidth"/>
+        <attr format="reference|color" name="OtpLineColor"/>
+        <attr format="enum" name="OtpViewType">
+            <enum name="rectangle" value="0"/>
+            <enum name="line" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+        <attr name="android:cursorVisible"/>
+        <attr name="android:textAllCaps"/>
+        <attr format="dimension" name="OtpCursorWidth"/>
+        <attr format="reference|color" name="OtpCursorColor"/>
+        <attr name="android:itemBackground"/>
+        <attr format="boolean" name="OtpHideLineWhenFilled"/>
+        <attr format="boolean" name="OtpState_filled"/>
+        <attr format="boolean" name="OtpRtlTextDirection"/>
+        <attr format="string" name="OtpMaskingChar"/>
+    </declare-styleable>
+
+    <declare-styleable name="PinViewTheme">
+        <attr name="pinViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PinView">
+        <attr name="itemCount" format="integer" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="itemRadius" format="dimension" />
+        <attr name="itemSpacing" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="viewType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="android:cursorVisible" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="reference|color" />
+        <attr name="android:itemBackground" />
+        <attr name="hideLineWhenFilled" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PinField">
+        <attr name="noOfFields" format="integer" />
+        <attr name="distanceInBetween" format="dimension" />
+        <attr name="lineThickness" format="dimension" />
+        <attr name="fieldColor" format="color" />
+        <attr name="highlightColor" format="color" />
+        <attr name="highlightEnabled" format="boolean" />
+        <attr name="isCustomBackground" format="boolean" />
+        <attr name="isCursorEnabled" format="boolean" />
+        <!--Single Field Mode is deprecated use highlight type to define how to highlight the fields-->
+        <attr name="highlightSingleFieldMode" format="boolean" />
+        <attr name="highlightType" format="enum" >
+            <enum name="allFields" value="0"/>
+            <enum name="currentField" value="1"/>
+            <enum name="completedFields" value="2"/>
+            <enum name="noFields" value="3"/>
+        </attr>
+        <attr name="fieldBgColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SquarePinField">
+        <attr name="cornerRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>
